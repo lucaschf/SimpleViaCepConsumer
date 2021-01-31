@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="253.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="tsi.ws.viacepconsumer.controller.MainWindowController">
+    <ProgressBar fx:id="progressBar" layoutX="177.0" layoutY="76.0" prefHeight="26.0" prefWidth="95.0"
+                 progress="0.0"/>
+    <Label layoutX="14.0" layoutY="58.0" text="Cep:" AnchorPane.leftAnchor="14.0"/>
+    <Label layoutX="40.0" layoutY="58.0" text=" *" textFill="#fd0f0f"/>
+    <TextField fx:id="zipcodeTextField" layoutX="14.0" layoutY="76.0" AnchorPane.leftAnchor="14.0"/>
+    <Label layoutX="10.0" layoutY="14.0" text="Via CEP" AnchorPane.leftAnchor="14.0">
+        <font>
+            <Font size="18.0"/>
+        </font>
+    </Label>
+    <Button fx:id="fetchButton" layoutX="176.0" layoutY="76.0" mnemonicParsing="false" onAction="#fetch"
+            prefHeight="26.0" prefWidth="95.0" text="Consultar"/>
+    <TextField fx:id="publicPlaceTextField" editable="false" layoutX="14.0" layoutY="151.0" prefHeight="26.0"
+               prefWidth="200.0"/>
+    <Label layoutX="14.0" layoutY="131.0" text="Logradouro:"/>
+    <Label layoutX="225.0" layoutY="130.0" prefHeight="18.0" prefWidth="45.0" text="Bairro:"/>
+    <Label layoutX="19.0" layoutY="185.0" text="Localidade:" AnchorPane.leftAnchor="14.0"/>
+    <Label layoutX="425.0" layoutY="131.0" text="Estado:"/>
+    <Label layoutX="226.0" layoutY="185.0" text="IBGE:"/>
+    <TextField fx:id="neighborhoodTextField" editable="false" layoutX="224.0" layoutY="151.0" prefHeight="26.0"
+               prefWidth="191.0"/>
+    <TextField fx:id="stateTextField" editable="false" layoutX="425.0" layoutY="151.0" prefHeight="26.0"
+               prefWidth="158.0" AnchorPane.rightAnchor="14.0"/>
+    <TextField fx:id="localityTextField" editable="false" layoutX="14.0" layoutY="207.0" prefHeight="26.0"
+               prefWidth="200.0"/>
+    <TextField fx:id="IbgeTextField" editable="false" layoutX="226.0" layoutY="207.0"/>
+    <Separator layoutX="14.0" layoutY="124.0" prefWidth="200.0" AnchorPane.leftAnchor="14.0"
+               AnchorPane.rightAnchor="14.0"/>
+</AnchorPane>
