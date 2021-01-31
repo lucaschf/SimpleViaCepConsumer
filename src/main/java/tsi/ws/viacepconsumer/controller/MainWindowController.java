@@ -40,10 +40,14 @@ public class MainWindowController implements Initializable {
     private TextField IbgeTextField;
 
     private final ViaCepService service = new ViaCepService();
+    private Thread fetchThread = null;
 
     @FXML
     void fetch() {
-        fetchZipCode();
+        if (fetchThread == null || !fetchThread.isAlive()) {
+            fetchThread = new Thread(this::fetchZipCode);
+            fetchThread.start();
+        }
     }
 
     private void fetchZipCode() {
